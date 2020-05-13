@@ -30,6 +30,16 @@ class Song
     @@all.find{ |song| song.name == name }
   end
 
+  def self.find_or_create_by_name(name)
+    if @@all.find { |song| song.name == name }
+      puts song
+    else
+      song = self.create 
+      song.name = name 
+      song
+    end 
+  end 
+
 
 
 
