@@ -34,10 +34,10 @@ class Song
     if @@all.find { |song| song.name == name }
       puts song
     else
-      song = self.create 
-      song.name = name 
+      song = self.create
+      song.name = name
       song
-    end 
+    end
   end 
 
 
