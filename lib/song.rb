@@ -50,6 +50,17 @@ class Song
     song
   end
 
+  def self.create_from_filename(name)
+    name_data =name.sub!(/.mp3/,'').split(' - ')
+    song = self.create
+    song.name = name_data[0]
+    song
+  end
+
+  def self.destroy_all
+    @@all = []
+  end 
+
 
 
 end
